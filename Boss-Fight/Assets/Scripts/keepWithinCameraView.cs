@@ -14,7 +14,7 @@ public class keepWithinCameraView : MonoBehaviour
     void Update()
     {
         // Keep boss within camera view
-        // WorldToViewportPoint -Transforms position from viewport space into world space
+        // WorldToViewportPoint - Transforms position from viewport space into world space
         Vector3 bossPosition = Camera.main.WorldToViewportPoint(transform.position);
 
         // Mathf.Clamp01 - Clamps the given value between the given minimum float and maximum float values
