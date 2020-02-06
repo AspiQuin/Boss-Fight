@@ -14,7 +14,8 @@ public class runForward : MonoBehaviour
     public Vector2 position;
     bool inRange = false;
     int chargeCount = 0;
-    int rangeDist = 10;
+    int rangeDist = 6;
+    public Vector2 bossCurrPos;
 
     // Start is called before the first frame update
     void Start()
@@ -25,16 +26,27 @@ public class runForward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Check whether the player is within a certain range of the boss and sets inRange to true if they are
         if (Vector2.Distance(transform.position, thePlayer.position) <= rangeDist)
         {
             inRange = true;
         }
 
+        // This basically just gets the position of the player when they entered the range of the boss
         if (inRange == true && chargeCount == 0)
         {
             lastPos = GameObject.Find("player-placeholder").transform.position;
             position = gameObject.transform.position;
             chargeCount = 1;
+        }
+
+        // Get bosses current position
+        bossCurrPos = gameObject.transform.position;
+
+        // Mathf.Approximately compares two floats to see if they are within a small value of each other (since comparing two float values using == can be inaccurate)
+        if (Mathf.Approximately(lastPos.x, bossCurrPos.x))
+        {
+            chargeCount = 0;
         }
 
         tackleForward();
