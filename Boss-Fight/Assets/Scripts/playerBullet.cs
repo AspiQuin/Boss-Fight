@@ -2,21 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class attackScript : MonoBehaviour
+public class playerBullet : MonoBehaviour
 {
 
     public GameObject playerProjectile;
 
+    float actionTimer;
+
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(playerProjectile, transform.position, Quaternion,identity);
+        //Instantiate(playerProjectile, transform.position, Quaternion.identity);
     }
 
     float direction = 3F;
     // Update is called once per frame
     void Update()
     {
+        actionTimer += Time.deltaTime;
         if (Input.GetKey("up"))
         {
             direction = 0F;
@@ -35,8 +38,14 @@ public class attackScript : MonoBehaviour
         }
         if (Input.GetKey("space"))
         {
-            GameObject projectileClone;
-            projectileClone = Instantiate(playerProjectile, transform.position, Quaternion,identity);
+            if (actionTimer > 2)
+            {
+                GameObject projectileClone;
+                projectileClone = Instantiate(playerProjectile, transform.position, Quaternion.identity);
+                projectileClone.GetComponent<Rigidbody2D>().AddForce(new Vector2(600,0));
+                actionTimer = 0;
+            }
+            
         }
 
     }

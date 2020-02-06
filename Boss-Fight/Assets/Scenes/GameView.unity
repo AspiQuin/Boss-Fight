@@ -291,11 +291,11 @@ GameObject:
   - component: {fileID: 646704154}
   - component: {fileID: 646704153}
   - component: {fileID: 646704156}
+  - component: {fileID: 646704160}
   - component: {fileID: 646704155}
   - component: {fileID: 646704157}
   - component: {fileID: 646704158}
   - component: {fileID: 646704159}
-  - component: {fileID: 646704160}
   m_Layer: 0
   m_Name: player-placeholder
   m_TagString: Untagged
@@ -464,6 +464,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fe3f3f83d8fea4c9e57fa694826bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProjectile: {fileID: 6851810909568674959, guid: 16335b46c08219c4391a8f6919bbd2b9,
+    type: 3}
 --- !u!1 &668806673
 GameObject:
   m_ObjectHideFlags: 0
