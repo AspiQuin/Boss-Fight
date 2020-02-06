@@ -15,9 +15,12 @@ public class playerProjectileScript : MonoBehaviour
     //Detect collisions between the GameObjects with Colliders attached
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("test");
+        
         if (collision.gameObject.name == "boss")
         {
             Destroy(gameObject);
+            
         }
 
     }
