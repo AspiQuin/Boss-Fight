@@ -5,16 +5,20 @@ using UnityEngine;
 public class runForward : MonoBehaviour
 {
     int chargeDistance = 10;
-    int chargeSpeed = 7;
+    int chargeCount = 0;
+    int rangeDist = 5;
+    int chargeSpeed = 6;
+
     public Rigidbody2D theBoss;
-    public Transform thePlayer;
     public Rigidbody2D player2;
+
+    public Transform thePlayer;
+
     bool haveCollided = false;
+    bool inRange = false;
+
     public Vector2 lastPos;
     public Vector2 position;
-    bool inRange = false;
-    int chargeCount = 0;
-    int rangeDist = 6;
     public Vector2 bossCurrPos;
 
     // Start is called before the first frame update
