@@ -10,7 +10,7 @@ public class attackScript : MonoBehaviour
         
     }
 
-    float direction = 0F;
+    float direction = 3F;
     // Update is called once per frame
     void Update()
     {
