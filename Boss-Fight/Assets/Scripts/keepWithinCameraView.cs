@@ -14,9 +14,9 @@ public class keepWithinCameraView : MonoBehaviour
 
     Vector2 maximum;
 
-    Vector2 verticalBound;
+    Vector2 moveRangeMin;
 
-    Vector2 minBound;
+    Vector2 moveRangeMax;
 
     bool isOverX;
     bool isUnderX;
@@ -32,6 +32,11 @@ public class keepWithinCameraView : MonoBehaviour
         minimum = objectSize.bounds.min;
         maximum = objectSize.bounds.max;
 
+        Vector3 bottomLeftWorldCoordinates = Camera.main.ViewportToWorldPoint(Vector3.zero);
+        Vector3 topRightWorldCoordinates = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0));
+
+        moveRangeMin = bottomLeftWorldCoordinates + objectSize.bounds.extents;
+        moveRangeMax = topRightWorldCoordinates - objectSize.bounds.extents;
 
         bounding = objectSize.bounds.extents;
 
@@ -54,8 +59,8 @@ public class keepWithinCameraView : MonoBehaviour
         Vector3 bossPosition = Camera.main.WorldToViewportPoint(transform.position);
         //Debug.Log(transform.position);
         //Debug.Log(bossPosition);
-        
-        if(bossPosition.x > 1)
+        /*
+        if(bossPosition.x > 0.99)
         {
             isOverX = true;
         }
@@ -113,5 +118,13 @@ public class keepWithinCameraView : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y - bounding.y, transform.position.z);
         }
+        */
+    }
+    public void LateUpdate()
+    {
+        Vector3 newPosition = transform.position;
+        newPosition.x = Mathf.Clamp(newPosition.x, moveRangeMin.x, moveRangeMax.x);
+        newPosition.y = Mathf.Clamp(newPosition.y, moveRangeMin.y, moveRangeMax.y);
+        transform.Translate(newPosition - transform.position);
     }
 }
