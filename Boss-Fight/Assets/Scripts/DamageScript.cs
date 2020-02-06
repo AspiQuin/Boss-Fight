@@ -6,6 +6,7 @@ public class DamageScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public int Health;
+    int totalHealth;
     //public Animator animator;
     public bool dead = false;
 
@@ -14,7 +15,7 @@ public class DamageScript : MonoBehaviour
     float deathTime = 5.0f;
     void Start()
     {
-        
+        totalHealth = Health;
     }
 
     // Update is called once per frame
