@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class attackScript : MonoBehaviour
 {
+
+    public GameObject playerProjectile;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Instantiate(playerProjectile, transform.position, Quaternion,identity);
     }
 
     float direction = 3F;
@@ -32,7 +35,8 @@ public class attackScript : MonoBehaviour
         }
         if (Input.GetKey("space"))
         {
-            //Instantiate(playerProjectile);
+            GameObject projectileClone;
+            projectileClone = Instantiate(playerProjectile, transform.position, Quaternion,identity);
         }
 
     }
