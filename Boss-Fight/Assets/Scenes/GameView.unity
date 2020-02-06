@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 646704155}
   - component: {fileID: 646704157}
   - component: {fileID: 646704158}
+  - component: {fileID: 646704159}
   m_Layer: 0
   m_Name: player-placeholder
   m_TagString: Untagged
@@ -275,6 +276,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79c0499b3fe90d44688f89029751ed81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &646704159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646704152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306aba37ccbde5f4081c50db1278c685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100
+  animator: {fileID: 0}
+  dead: 0
 --- !u!1 &668806673
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +468,7 @@ GameObject:
   - component: {fileID: 1342271603}
   - component: {fileID: 1342271602}
   - component: {fileID: 1342271604}
+  - component: {fileID: 1342271605}
   m_Layer: 0
   m_Name: boss
   m_TagString: Untagged
@@ -712,3 +729,18 @@ MonoBehaviour:
   my_rb: {fileID: 1342271602}
   player1: {fileID: 646704155}
   player: {fileID: 646704154}
+--- !u!114 &1342271605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342271598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306aba37ccbde5f4081c50db1278c685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 500
+  animator: {fileID: 0}
+  dead: 0
