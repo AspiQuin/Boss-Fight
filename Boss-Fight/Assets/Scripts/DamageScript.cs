@@ -6,7 +6,7 @@ public class DamageScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public int Health;
-    public Animator animator;
+    //public Animator animator;
     public bool dead = false;
 
 
@@ -31,7 +31,7 @@ public class DamageScript : MonoBehaviour
         {
             timer = 0;
         }
-        animator.SetBool("dead", dead);
+        //animator.SetBool("dead", dead);
 
         //remove from screen after a time
         if ((timer > deathTime) && dead)
