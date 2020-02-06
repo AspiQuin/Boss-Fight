@@ -14,8 +14,8 @@ public class bossDamageScript : MonoBehaviour
     {
         if (collide.gameObject.tag == "playerProjectile")
         {
-            gameObject.getComponent<DamageScript>().damageTaken(10);
-            destroy(collide.gameObject);
+            gameObject.GetComponent<DamageScript>().damageTaken(10);
+            Destroy(collide.gameObject);
         }
     }
 
