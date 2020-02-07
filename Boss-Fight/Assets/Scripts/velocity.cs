@@ -22,7 +22,7 @@ public class velocity : MonoBehaviour
         
     }
 
-    float movementSpeed = 0.5F;
+    float movementSpeed = 15F;
 
     // Update is called once per frame
     void Update()
@@ -30,16 +30,16 @@ public class velocity : MonoBehaviour
         switch (direction)
         {
             case 0:
-            transform.Translate(0,movementSpeed,0);
+            transform.Translate(0,movementSpeed * Time.deltaTime ,0);
             break;
             case 1:
-            transform.Translate(0,-movementSpeed,0);
+            transform.Translate(0,-movementSpeed * Time.deltaTime,0);
             break;
             case 2:
-            transform.Translate(movementSpeed,0,0);
+            transform.Translate(movementSpeed * Time.deltaTime,0,0);
             break;
             case 3:
-            transform.Translate(-movementSpeed,0,0);
+            transform.Translate(-movementSpeed * Time.deltaTime,0,0);
             break;
         }
     }
