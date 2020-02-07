@@ -9,7 +9,7 @@ using UnityEngine;
 
 public class velocity : MonoBehaviour
 {
-    public float direction = 0F;
+    public static float direction = 0F;
 
     public void setDirection(float input)
     {

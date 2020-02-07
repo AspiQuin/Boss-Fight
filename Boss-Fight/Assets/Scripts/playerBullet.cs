@@ -52,7 +52,7 @@ public class playerBullet : MonoBehaviour
             {
                 GameObject projectileClone;
                 projectileClone = Instantiate(playerProjectile, spawnPos, Quaternion.identity);
-                //projectileClone.GetComponent<Rigidbody2D>().AddForce(new Vector2(600,0));
+                velocity.direction = direction;
                 actionTimer = 0;
             }
             
