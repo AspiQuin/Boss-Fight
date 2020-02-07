@@ -28,12 +28,12 @@ public class playerBullet : MonoBehaviour
         if (Input.GetKey("up"))
         {
             direction = 0F;
-            spawnPos = new Vector2(transform.position.x, transform.position.y - (playerSize.y * 2));
+            spawnPos = new Vector2(transform.position.x, transform.position.y + (playerSize.y * 2));
         }
         if (Input.GetKey("down"))
         {
             direction = 1F;
-            spawnPos = new Vector2(transform.position.x, transform.position.y + (playerSize.y * 2));
+            spawnPos = new Vector2(transform.position.x, transform.position.y - (playerSize.y * 2));
         }
         if (Input.GetKey("right"))
         {

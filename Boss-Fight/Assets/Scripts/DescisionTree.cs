@@ -58,20 +58,22 @@ public class DescisionTree : MonoBehaviour
 
             if (!gameObject.GetComponent<bossMove>().enabled)
             {
-                gameObject.GetComponent<bossMove>().enabled = true; ;
+                gameObject.GetComponent<bossMove>().enabled = true;
+                Debug.Log("test");
             }
             timer = 0;
             //if the player is within a certain distance
             if (distanceDetector > distanceSensor)
             {
-                gameObject.GetComponent<bossMove>().enabled = false;
+                //gameObject.GetComponent<bossMove>().enabled = false;
 
                 gameObject.GetComponent<runForward>().enabled = true;
             }
             //if the player is within another distance
             else if (distanceDetector < distanceSensor)
             {
-                
+                gameObject.GetComponent<bossMove>().enabled = true;
+
                 //shoot or move
                 if (makeChoice)
                 {
@@ -97,8 +99,8 @@ public class DescisionTree : MonoBehaviour
             }
             else
             {
-                
-                
+                gameObject.GetComponent<bossMove>().enabled = false;
+
                 //tackle forward
             }
            
