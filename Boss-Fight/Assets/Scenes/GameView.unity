@@ -296,6 +296,7 @@ GameObject:
   - component: {fileID: 646704157}
   - component: {fileID: 646704158}
   - component: {fileID: 646704159}
+  - component: {fileID: 646704161}
   m_Layer: 0
   m_Name: player-placeholder
   m_TagString: Untagged
@@ -387,7 +388,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &646704156
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -398,7 +399,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -466,6 +467,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerProjectile: {fileID: 6851810909568674959, guid: 16335b46c08219c4391a8f6919bbd2b9,
     type: 3}
+--- !u!114 &646704161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646704152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cbf7c8d2e94e2e48914c6e51b63138e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTimer: 1
 --- !u!1 &668806673
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,9 +659,11 @@ GameObject:
   - component: {fileID: 1342271604}
   - component: {fileID: 1342271605}
   - component: {fileID: 1342271606}
+  - component: {fileID: 1342271608}
+  - component: {fileID: 1342271607}
   m_Layer: 0
   m_Name: boss
-  m_TagString: Untagged
+  m_TagString: boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -748,7 +764,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!60 &1342271603
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -898,7 +914,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342271598}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92e82f07dcb69434db7aea103209aa01, type: 3}
   m_Name: 
@@ -932,3 +948,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4908599b68c4f84f9cd354f0466ef33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1342271607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342271598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba9d7583e0914a4c90271272d0e9c5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  makeChoice: 0
+  distanceSensor: 4
+  actionUpdate: 1
+  player: {fileID: 646704152}
+--- !u!114 &1342271608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342271598}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab0a82ed68d1ff47af779b9ee94149c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theBoss: {fileID: 1342271602}
+  thePlayer: {fileID: 646704154}
+  lastPos: {x: 0, y: 0}
+  position: {x: 0, y: 0}
+  bossCurrPos: {x: 0, y: 0}

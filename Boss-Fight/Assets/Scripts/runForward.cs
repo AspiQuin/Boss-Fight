@@ -6,11 +6,11 @@ public class runForward : MonoBehaviour
 {
     int chargeDistance = 10;
     int chargeCount = 0;
-    int rangeDist = 5;
+    int rangeDist = 6;
     int chargeSpeed = 6;
 
     public Rigidbody2D theBoss;
-    public Rigidbody2D player2;
+    //public Rigidbody2D player2;
 
     public Transform thePlayer;
 
@@ -51,21 +51,22 @@ public class runForward : MonoBehaviour
         if (Mathf.Approximately(lastPos.x, bossCurrPos.x))
         {
             chargeCount = 0;
+
+            gameObject.GetComponent<runForward>().enabled = false;
         }
 
         tackleForward();
 
-        // Freeze the rotation on the boss and player to prevent from the tipping over when they collide
-        theBoss.freezeRotation = true;
-        player2.freezeRotation = true;
+   
 
     }
 
-    void tackleForward()
+    public void tackleForward()
     {
         if (Vector2.Distance(transform.position, thePlayer.position) <= chargeDistance && haveCollided == false)
         {
             transform.position = Vector2.MoveTowards(transform.position, lastPos, chargeSpeed * Time.deltaTime);
+            gameObject.GetComponent<bossMove>().enabled = true;
         }
     }
 

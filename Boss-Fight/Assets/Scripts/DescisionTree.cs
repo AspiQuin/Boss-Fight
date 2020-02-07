@@ -59,11 +59,14 @@ public class DescisionTree : MonoBehaviour
             //if the player is within a certain distance
             if (distanceDetector > distanceSensor)
             {
-                //ForwardTackle()
+                gameObject.GetComponent<bossMove>().enabled = false;
+
+                gameObject.GetComponent<runForward>().enabled = true;
             }
             //if the player is within another distance
-            else if (distanceDetector < distanceSensor * 2)
+            else if (distanceDetector < distanceSensor)
             {
+                
                 //shoot or move
                 if (makeChoice)
                 {
@@ -89,6 +92,8 @@ public class DescisionTree : MonoBehaviour
             }
             else
             {
+                
+                
                 //tackle forward
             }
            
