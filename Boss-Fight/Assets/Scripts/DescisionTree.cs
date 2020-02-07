@@ -55,6 +55,11 @@ public class DescisionTree : MonoBehaviour
         //check if the action timer has expired
         if (timer > actionUpdate)
         {
+
+            if (!gameObject.GetComponent<bossMove>().enabled)
+            {
+                gameObject.GetComponent<bossMove>().enabled = true; ;
+            }
             timer = 0;
             //if the player is within a certain distance
             if (distanceDetector > distanceSensor)
