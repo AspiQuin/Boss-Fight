@@ -6,6 +6,8 @@ TagManager:
   tags:
   - playerProjectile
   - boss
+  - showOnDead
+  - showOnWin
   layers:
   - Default
   - TransparentFX
