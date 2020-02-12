@@ -19,11 +19,12 @@ public class moveDirection : MonoBehaviour
     {
         if (prevPos.x < gameObject.transform.position.x)
         {
-            gameObject.GetComponent<SpriteRenderer>().flipX = false;
-        }
-        else
-        {
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
+        else if (prevPos.x > gameObject.transform.position.x)
+        {
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        }
+        prevPos = gameObject.transform.position;
     }
 }

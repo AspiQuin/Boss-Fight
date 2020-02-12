@@ -48,7 +48,7 @@ public class playerBullet : MonoBehaviour
         }
         if (Input.GetKeyDown("space"))
         {
-            if (actionTimer > 0.5)
+            if (actionTimer > 0.2)
             {
                 GameObject projectileClone;
                 projectileClone = Instantiate(playerProjectile, spawnPos, Quaternion.identity);
