@@ -9,9 +9,14 @@ public class playerBullet : MonoBehaviour
 
     float actionTimer;
 
+    Vector3 spawnPos;
+
+    Vector2 playerSize;
+
     // Start is called before the first frame update
     void Start()
     {
+        playerSize = gameObject.GetComponent<Collider2D>().bounds.extents;
         //Instantiate(playerProjectile, transform.position, Quaternion.identity);
     }
 
@@ -23,26 +28,31 @@ public class playerBullet : MonoBehaviour
         if (Input.GetKey("up"))
         {
             direction = 0F;
+            spawnPos = new Vector2(transform.position.x, transform.position.y + (playerSize.y * 2));
         }
         if (Input.GetKey("down"))
         {
             direction = 1F;
+            spawnPos = new Vector2(transform.position.x, transform.position.y - (playerSize.y * 2));
         }
         if (Input.GetKey("right"))
         {
             direction = 2F;
+            spawnPos = new Vector2(transform.position.x + (playerSize.x * 2), transform.position.y);
         }
         if (Input.GetKey("left"))
         {
             direction = 3F;
+            spawnPos = new Vector2(transform.position.x - (playerSize.x * 2), transform.position.y);
+
         }
-        if (Input.GetKey("space"))
+        if (Input.GetKeyDown("space"))
         {
-            if (actionTimer > 2)
+            if (actionTimer > 0.2)
             {
                 GameObject projectileClone;
-                projectileClone = Instantiate(playerProjectile, transform.position, Quaternion.identity);
-                projectileClone.GetComponent<Rigidbody2D>().AddForce(new Vector2(600,0));
+                projectileClone = Instantiate(playerProjectile, spawnPos, Quaternion.identity);
+                velocity.direction = direction;
                 actionTimer = 0;
             }
             

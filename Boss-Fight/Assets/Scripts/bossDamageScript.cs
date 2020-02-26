@@ -16,6 +16,8 @@ public class bossDamageScript : MonoBehaviour
         {
             gameObject.GetComponent<DamageScript>().damageTaken(10);
             Destroy(collide.gameObject);
+            //gameObject.GetComponent<bossMove>().enabled = true;
+
         }
     }
 

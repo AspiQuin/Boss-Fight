@@ -38,6 +38,7 @@ public class DamageScript : MonoBehaviour
         if ((timer > deathTime) && dead)
         {
             gameObject.SetActive(false);
+     
         }
     }
 

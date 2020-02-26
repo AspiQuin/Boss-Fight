@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - playerProjectile
+  - boss
+  - showOnDead
+  - showOnWin
   layers:
   - Default
   - TransparentFX
@@ -47,4 +50,7 @@ TagManager:
     locked: 0
   - name: boss and player
     uniqueID: 1101088805
+    locked: 0
+  - name: Projectile
+    uniqueID: 2038290601
     locked: 0
