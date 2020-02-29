@@ -16,7 +16,7 @@ public class pressKeyStart : MonoBehaviour
     {
         if (Input.anyKey)
         {
-            SceneManager.LoadScene("GameView");
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }
