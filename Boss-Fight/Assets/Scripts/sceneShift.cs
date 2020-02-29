@@ -32,8 +32,19 @@ public class sceneShift : MonoBehaviour
         SceneManager.LoadScene("Controls");
     }
     
+        
+    public void CreditsScreen()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+    
     public void GameStart()
     {
         SceneManager.LoadScene("GameView");
+    }
+    
+    public void Leaderboard()
+    {
+        SceneManager.LoadScene("Leaderboard");
     }
 }
