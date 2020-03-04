@@ -13,11 +13,19 @@ public class playerBullet : MonoBehaviour
 
     Vector2 playerSize;
 
+    float movementSpeed = 30F;
+
     // Start is called before the first frame update
     void Start()
     {
         playerSize = gameObject.GetComponent<Collider2D>().bounds.extents;
+        spawnPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - (playerSize.y * 2));
         //Instantiate(playerProjectile, transform.position, Quaternion.identity);
+    }
+
+    public void setSpawn()
+    {
+        spawnPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - (playerSize.y * 2));
     }
 
     float direction = 3F;
@@ -50,13 +58,29 @@ public class playerBullet : MonoBehaviour
         {
             if (actionTimer > 0.2)
             {
+                //Debug.Log(spawnPos);
                 GameObject projectileClone;
                 projectileClone = Instantiate(playerProjectile, spawnPos, Quaternion.identity);
-                velocity.direction = direction;
-                actionTimer = 0;
+                //velocity.direction = direction;
+
+                switch (direction)
+                {
+                    case 0:
+                        projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(0, movementSpeed * 50 * Time.deltaTime);
+                        break;
+                    case 1:
+                        projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -movementSpeed * 50 * Time.deltaTime);
+                        break;
+                    case 2:
+                        projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(movementSpeed * 50 * Time.deltaTime, 0);
+                        break;
+                    case 3:
+                        projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(-movementSpeed * 50 * Time.deltaTime, 0);
+                        break;
+                }
             }
-            
-        }
+
+            }
 
     }
 }
