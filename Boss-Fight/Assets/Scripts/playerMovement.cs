@@ -12,25 +12,48 @@ public class playerMovement : MonoBehaviour
 
     //Speed of the player character
     const float moveSpeed = 10F;
+    const float normalizedSpeed = 7.07F;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("up"))
+        
+        if (Input.GetKey("up") && Input.GetKey("right"))
         {
-            transform.Translate(0,moveSpeed * Time.deltaTime ,0);
+            transform.Translate(normalizedSpeed*Time.deltaTime,normalizedSpeed*Time.deltaTime,0);
         }
-        if (Input.GetKey("down"))
+        else if(Input.GetKey("down") && Input.GetKey("right"))
         {
-            transform.Translate(0,-moveSpeed * Time.deltaTime, 0);
+            transform.Translate(normalizedSpeed*Time.deltaTime,-normalizedSpeed*Time.deltaTime,0);
         }
-        if (Input.GetKey("right"))
+        else if(Input.GetKey("up") && Input.GetKey("left"))
         {
-            transform.Translate(moveSpeed * Time.deltaTime, 0,0);
+            transform.Translate(-normalizedSpeed*Time.deltaTime,normalizedSpeed*Time.deltaTime,0);
         }
-        if (Input.GetKey("left"))
+        else if(Input.GetKey("down") && Input.GetKey("left"))
         {
-            transform.Translate(-moveSpeed * Time.deltaTime, 0,0);
+            transform.Translate(-normalizedSpeed*Time.deltaTime,-normalizedSpeed*Time.deltaTime,0);
         }
+        else
+        {
+            if (Input.GetKey("up"))
+            {
+                transform.Translate(0,moveSpeed * Time.deltaTime ,0);
+            }
+            if (Input.GetKey("down"))
+            {
+                transform.Translate(0,-moveSpeed * Time.deltaTime, 0);
+            }
+            if (Input.GetKey("right"))
+            {
+                transform.Translate(moveSpeed * Time.deltaTime, 0,0);
+            }
+            if (Input.GetKey("left"))
+            {
+                transform.Translate(-moveSpeed * Time.deltaTime, 0,0);
+            }
+        }
+
+
     }
 }
