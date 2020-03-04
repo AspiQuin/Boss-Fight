@@ -13,7 +13,7 @@ public class playerBullet : MonoBehaviour
 
     Vector2 playerSize;
 
-    float movementSpeed = 30F;
+    float movementSpeed = 2000F;
 
     // Start is called before the first frame update
     void Start()
@@ -66,18 +66,19 @@ public class playerBullet : MonoBehaviour
                 switch (direction)
                 {
                     case 0:
-                        projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(0, movementSpeed * 50 * Time.deltaTime);
+                        projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(0, movementSpeed * Time.deltaTime);
                         break;
                     case 1:
-                        projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -movementSpeed * 50 * Time.deltaTime);
+                        projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -movementSpeed  * Time.deltaTime);
                         break;
                     case 2:
-                        projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(movementSpeed * 50 * Time.deltaTime, 0);
+                        projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(movementSpeed * Time.deltaTime, 0);
                         break;
                     case 3:
-                        projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(-movementSpeed * 50 * Time.deltaTime, 0);
+                        projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(-movementSpeed * Time.deltaTime, 0);
                         break;
                 }
+                actionTimer = 0;
             }
 
             }
