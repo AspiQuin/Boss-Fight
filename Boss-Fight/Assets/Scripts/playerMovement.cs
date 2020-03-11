@@ -13,8 +13,10 @@ public class playerMovement : MonoBehaviour
     //Speed of the player character
     float moveSpeed = 10F;
     float normalizedSpeed = 7.07F;
+    //Timer for dash cooldown variables
     float actionTimer;
-    float storedTime = 0;
+    float storedTime = 0F;
+    bool canDash = true;
 
     // Update is called once per frame
     void Update()
@@ -58,16 +60,22 @@ public class playerMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetKey("z"))
+        if (Input.GetKey("z") && canDash)
         {
                 moveSpeed = 30F;
                 normalizedSpeed = 21.21F;
-                storedTime = actionTimer; 
+                storedTime = actionTimer;
+                canDash = false;
         }
-        else
+        if (actionTimer > storedTime + 0.2)
         {
             moveSpeed = 10F;
             normalizedSpeed = 7.07F;
+        }
+        if (actionTimer > storedTime + 5)
+        {
+            actionTimer = 0;
+            canDash = true;
         }
 
 
