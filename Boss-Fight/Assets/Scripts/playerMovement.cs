@@ -11,13 +11,17 @@ public class playerMovement : MonoBehaviour
     }
 
     //Speed of the player character
-    const float moveSpeed = 10F;
-    const float normalizedSpeed = 7.07F;
+    float moveSpeed = 10F;
+    float normalizedSpeed = 7.07F;
+    float actionTimer;
+    float storedTime = 0;
 
     // Update is called once per frame
     void Update()
     {
         
+        actionTimer += Time.deltaTime;
+
         if (Input.GetKey("up") && Input.GetKey("right"))
         {
             transform.Translate(normalizedSpeed*Time.deltaTime,normalizedSpeed*Time.deltaTime,0);
@@ -52,6 +56,18 @@ public class playerMovement : MonoBehaviour
             {
                 transform.Translate(-moveSpeed * Time.deltaTime, 0,0);
             }
+        }
+
+        if (Input.GetKey("z"))
+        {
+                moveSpeed = 30F;
+                normalizedSpeed = 21.21F;
+                storedTime = actionTimer; 
+        }
+        else
+        {
+            moveSpeed = 10F;
+            normalizedSpeed = 7.07F;
         }
 
 
