@@ -15,7 +15,7 @@ public class AgentBullet : MonoBehaviour
 
     public float agentInput;
 
-    float movementSpeed = 45F;
+    float movementSpeed = 500F;
 
     // Start is called before the first frame update
     void Start()
@@ -65,16 +65,16 @@ public class AgentBullet : MonoBehaviour
                         switch (direction)
                     {
                         case 0:
-                            projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(0, movementSpeed * Time.deltaTime);
+                            projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(0, movementSpeed * Time.fixedDeltaTime);
                             break;
                         case 1:
-                            projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -movementSpeed * Time.deltaTime);
+                            projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -movementSpeed * Time.fixedDeltaTime);
                             break;
                         case 2:
-                            projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(movementSpeed  * Time.deltaTime, 0);
+                            projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(movementSpeed  * Time.fixedDeltaTime, 0);
                             break;
                         case 3:
-                            projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(-movementSpeed  * Time.deltaTime, 0);
+                            projectileClone.GetComponent<Rigidbody2D>().velocity = new Vector2(-movementSpeed  * Time.fixedDeltaTime, 0);
                             break;
                     }
                     actionTimer = 0;

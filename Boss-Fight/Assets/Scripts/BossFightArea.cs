@@ -139,8 +139,8 @@ public class BossFightArea : MonoBehaviour
 
         players = playersList.ToArray();
 
-        trueAgent.GetComponent<DamageScript>().Health = 30;
-        mimicAgent.GetComponent<DamageScript>().Health = 50;
+        trueAgent.GetComponent<DamageScript>().Health = 300;
+        mimicAgent.GetComponent<DamageScript>().Health = 100;
 
         mimicAgent.GetComponent<AgentBullet>().setSpawn();
 
