@@ -228,6 +228,17 @@ PrefabInstance:
       propertyPath: m_BehaviorType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 194301493580653751, guid: 2979cc4b0f55869459689801375ede81,
+        type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 78e4407521366f9429e3b127a23b33ad,
+        type: 3}
+    - target: {fileID: 194301493580653751, guid: 2979cc4b0f55869459689801375ede81,
+        type: 3}
+      propertyPath: m_BehaviorName
+      value: playerLearning
+      objectReference: {fileID: 0}
     - target: {fileID: 837974927540145304, guid: 2979cc4b0f55869459689801375ede81,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -338,6 +349,18 @@ PrefabInstance:
       propertyPath: m_agent
       value: 
       objectReference: {fileID: 812265354445606341}
+    - target: {fileID: 7264965338723125725, guid: 2979cc4b0f55869459689801375ede81,
+        type: 3}
+      propertyPath: bossBrain
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 5e812fb65a4d26449b0dbd052c8352d4,
+        type: 3}
+    - target: {fileID: 7264965338723125725, guid: 2979cc4b0f55869459689801375ede81,
+        type: 3}
+      propertyPath: playerBrain
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 78e4407521366f9429e3b127a23b33ad,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 2465300352213608066, guid: 2979cc4b0f55869459689801375ede81, type: 3}
     - {fileID: 7239965641489370462, guid: 2979cc4b0f55869459689801375ede81, type: 3}
@@ -373,6 +396,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7309217543326906}
     m_Modifications:
+    - target: {fileID: 1931858273694847656, guid: 89c17453f42efd543adc01a89e86732a,
+        type: 3}
+      propertyPath: m_BehaviorType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4411843749875756169, guid: 89c17453f42efd543adc01a89e86732a,
         type: 3}
       propertyPath: area

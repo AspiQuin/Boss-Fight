@@ -554,7 +554,7 @@ MonoBehaviour:
     vectorActionSize: 0b000000
     vectorActionDescriptions: []
     vectorActionSpaceType: 0
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: 5e812fb65a4d26449b0dbd052c8352d4, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: bossLearning
@@ -642,8 +642,10 @@ MonoBehaviour:
   showAction: 0
   showReward: 0
   showStep: 0
-  bossBrain: {fileID: 0}
-  playerBrain: {fileID: 0}
+  bossBrain: {fileID: 5022602860645237092, guid: 5e812fb65a4d26449b0dbd052c8352d4,
+    type: 3}
+  playerBrain: {fileID: 5022602860645237092, guid: 78e4407521366f9429e3b127a23b33ad,
+    type: 3}
   renderCamera: {fileID: 0}
   maskActions: 1
   shoot: 0
