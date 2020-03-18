@@ -54,7 +54,7 @@ public class playerBullet : MonoBehaviour
             spawnPos = new Vector2(transform.position.x - (playerSize.x * 2), transform.position.y);
 
         }
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("x"))
         {
             if (actionTimer > 0.2)
             {
