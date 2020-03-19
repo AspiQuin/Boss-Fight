@@ -24,6 +24,7 @@ public class projCollRange : MonoBehaviour
     void Update()
     {
         //this.transform.parent = theBoss.transform;
+        Debug.Log(theBoss.transform.position);
         collDetect.transform.position = theBoss.transform.position;
     }
 

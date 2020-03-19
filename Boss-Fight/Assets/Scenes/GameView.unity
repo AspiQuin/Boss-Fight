@@ -1407,8 +1407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529d357ec7649144da55a2d4dd379c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 6851810909568674959, guid: 16335b46c08219c4391a8f6919bbd2b9,
-    type: 3}
+  projectile: {fileID: 0}
   boss: {fileID: 1342271598}
 --- !u!1 &1586317778
 GameObject:

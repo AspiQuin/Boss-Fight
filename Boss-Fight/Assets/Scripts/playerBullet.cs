@@ -13,6 +13,9 @@ public class playerBullet : MonoBehaviour
 
     Vector2 playerSize;
 
+    bool changeDir = false;
+    bool range = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +23,17 @@ public class playerBullet : MonoBehaviour
         //Instantiate(playerProjectile, transform.position, Quaternion.identity);
     }
 
-    float direction = 3F;
+    public float direction = 3F;
     // Update is called once per frame
     void Update()
     {
         actionTimer += Time.deltaTime;
+
+        GameObject boss2 = GameObject.Find("boss");
+        bubbleShield bossScript = boss2.GetComponent<bubbleShield>();
+        changeDir = bossScript.changeDirection;
+        range = bossScript.isInRange;
+
         if (Input.GetKey("up"))
         {
             direction = 0F;
@@ -48,13 +57,18 @@ public class playerBullet : MonoBehaviour
         }
         if (Input.GetKeyDown("space"))
         {
+            
             if (actionTimer > 0.2)
             {
                 GameObject projectileClone;
                 projectileClone = Instantiate(playerProjectile, spawnPos, Quaternion.identity);
                 velocity.direction = direction;
-                actionTimer = 0;
+                changeDir = bossScript.changeDirection;
+                Debug.Log(changeDir);
+
+               
             }
+            
             
         }
 
