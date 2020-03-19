@@ -57,7 +57,7 @@ public class bubbleShield : MonoBehaviour
 
         if (fired == true)
         {
-            Debug.Log("FIRED");
+           // Debug.Log("FIRED");
             changeDirection = true;
             fired = false;
         }
