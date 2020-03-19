@@ -72,4 +72,6 @@ public class UIManager : MonoBehaviour
             g.SetActive(true);
         }
     }
+    
+    
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class bossDamageScript : MonoBehaviour
 {
+
+    public int testScore = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,9 +17,11 @@ public class bossDamageScript : MonoBehaviour
         if (collide.gameObject.tag == "playerProjectile")
         {
             gameObject.GetComponent<DamageScript>().damageTaken(10);
-            Destroy(collide.gameObject);
+            //Destroy(collide.gameObject);
             //gameObject.GetComponent<bossMove>().enabled = true;
-
+            
+            //Erin here making a very base score calculation to develop the leaderboard
+            testScore += 10;
         }
     }
 
