@@ -25,7 +25,7 @@ public class bubbleShield : MonoBehaviour
     {
         if (GameObject.FindWithTag("playerProjectile") != null)
         {
-            Debug.Log("exists");
+            //Debug.Log("exists");
             projectile = GameObject.FindWithTag("playerProjectile");
 
             // Check when projectile is in range 

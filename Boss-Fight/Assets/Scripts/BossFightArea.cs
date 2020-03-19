@@ -63,7 +63,7 @@ public class BossFightArea : MonoBehaviour
 
         m_InitialPosition = transform.position;
         //AreaReset();
-        //Debug.Log(Time.timeScale);// = 1;
+        //Time.timeScale;
     }
 
     private void Update()
@@ -139,8 +139,11 @@ public class BossFightArea : MonoBehaviour
 
         players = playersList.ToArray();
 
-        trueAgent.GetComponent<DamageScript>().Health = 300;
+        trueAgent.GetComponent<DamageScript>().Health = 100;
         mimicAgent.GetComponent<DamageScript>().Health = 100;
+
+        trueAgent.GetComponent<DamageScript>().dead = false;
+        mimicAgent.GetComponent<DamageScript>().dead = false;
 
         mimicAgent.GetComponent<AgentBullet>().setSpawn();
 

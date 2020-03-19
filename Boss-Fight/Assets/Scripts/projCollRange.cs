@@ -29,10 +29,10 @@ public class projCollRange : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("col");
+        //Debug.Log("col");
         if (collision.gameObject.tag == "playerProjectile")
         {
-            Debug.Log("coll = proj");
+            //Debug.Log("coll = proj");
         }
     }
 }

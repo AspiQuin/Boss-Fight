@@ -5,7 +5,7 @@ using UnityEngine;
 public class timedDestruction : MonoBehaviour
 {
     float timer;
-    float actionTimer = 1.0f;
+    float actionTimer = 0.6f;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +15,7 @@ public class timedDestruction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
+        timer += Time.fixedDeltaTime;
         if (timer > actionTimer)
         {
             Destroy(gameObject);

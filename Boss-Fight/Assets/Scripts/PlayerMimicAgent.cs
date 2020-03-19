@@ -198,51 +198,51 @@ public class PlayerMimicAgent : Agent
                 // do nothing
                 break;
             case k_Right:
-                transform.Translate(10f * Time.deltaTime, 0, 0f);
+                transform.Translate(10f * Time.fixedDeltaTime, 0, 0f);
                 if (!inverse)
                 {
                     gameObject.GetComponent<AgentBullet>().agentInput = k_Right;
                 }
                 break;
             case k_Left:
-                transform.Translate(-10f * Time.deltaTime, 0, 0f);
+                transform.Translate(-10f * Time.fixedDeltaTime, 0, 0f);
                 if (!inverse)
                 {
                     gameObject.GetComponent<AgentBullet>().agentInput = k_Left;
                 }
                 break;
             case k_Up:
-                transform.Translate(0, 10f * Time.deltaTime, 0);
+                transform.Translate(0, 10f * Time.fixedDeltaTime, 0);
                 if (!inverse)
                 {
                     gameObject.GetComponent<AgentBullet>().agentInput = k_Up;
                 }
                 break;
             case k_Down:
-                transform.Translate(0, -10f * Time.deltaTime, 0);
+                transform.Translate(0, -10f * Time.fixedDeltaTime, 0);
                 if (!inverse)
                 {
                     gameObject.GetComponent<AgentBullet>().agentInput = k_Down;
                 }
                 break;
             case 2:
-                transform.Translate(0, -10f * Time.deltaTime, 0);
+                transform.Translate(0, -10f * Time.fixedDeltaTime, 0);
                 if (!inverse)
                 {
                     gameObject.GetComponent<AgentBullet>().agentInput = k_Down;
                 }
                 break;
             case k_UpRight:
-                transform.Translate(7f * Time.deltaTime, 7f * Time.deltaTime, 0f); //+ new Vector3(10f, 0, 0f);
+                transform.Translate(7f * Time.fixedDeltaTime, 7f * Time.fixedDeltaTime, 0f); //+ new Vector3(10f, 0, 0f);
                 break;
             case k_UpLeft:
-                transform.Translate(-7f * Time.deltaTime, 7f * Time.deltaTime, 0f);// + new Vector3(-10f, 0, 0f);
+                transform.Translate(-7f * Time.fixedDeltaTime, 7f * Time.fixedDeltaTime, 0f);// + new Vector3(-10f, 0, 0f);
                 break;
             case k_DownRight:
-                transform.Translate(7f * Time.deltaTime, -7f * Time.deltaTime, 0);// + new Vector3(0f, 0, 10f);
+                transform.Translate(7f * Time.fixedDeltaTime, -7f * Time.fixedDeltaTime, 0);// + new Vector3(0f, 0, 10f);
                 break;
             case k_DownLeft:
-                transform.Translate(-7f * Time.deltaTime, -7f * Time.deltaTime, 0);// + new Vector3(0f, 0, -10f
+                transform.Translate(-7f * Time.fixedDeltaTime, -7f * Time.fixedDeltaTime, 0);// + new Vector3(0f, 0, -10f
                 break;
             case k_shoot:
                 //Debug.Log(action);
@@ -313,7 +313,7 @@ public class PlayerMimicAgent : Agent
 
         //Debug.Log("life");
 
-        timer += Time.unscaledDeltaTime;
+        timer += Time.fixedDeltaTime;
         if (collision.gameObject.tag == "Player" && inverse && timer >= 1.0f)
         {
             //Debug.Log("test");

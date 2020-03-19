@@ -260,6 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79c0499b3fe90d44688f89029751ed81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actionCam: {fileID: 0}
 --- !u!114 &837974927540145310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,7 +398,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  maxStep: 0
+  maxStep: 1500
   area: {fileID: 0}
   timeBetweenDecisionsAtInference: 0
   actionCam: {fileID: 0}

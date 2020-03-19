@@ -226,7 +226,7 @@ PrefabInstance:
     - target: {fileID: 194301493580653751, guid: 2979cc4b0f55869459689801375ede81,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 194301493580653751, guid: 2979cc4b0f55869459689801375ede81,
         type: 3}
@@ -238,6 +238,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BehaviorName
       value: playerLearning
+      objectReference: {fileID: 0}
+    - target: {fileID: 194301493580653751, guid: 2979cc4b0f55869459689801375ede81,
+        type: 3}
+      propertyPath: m_InferenceDevice
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 837974927540145304, guid: 2979cc4b0f55869459689801375ede81,
         type: 3}
@@ -314,6 +319,11 @@ PrefabInstance:
       propertyPath: Health
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 837974927540145311, guid: 2979cc4b0f55869459689801375ede81,
+        type: 3}
+      propertyPath: actionCam
+      value: 
+      objectReference: {fileID: 7309218160176263}
     - target: {fileID: 837974927540145313, guid: 2979cc4b0f55869459689801375ede81,
         type: 3}
       propertyPath: m_Enabled
@@ -404,7 +414,12 @@ PrefabInstance:
     - target: {fileID: 1931858273694847656, guid: 89c17453f42efd543adc01a89e86732a,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1931858273694847656, guid: 89c17453f42efd543adc01a89e86732a,
+        type: 3}
+      propertyPath: m_InferenceDevice
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4411843749875756169, guid: 89c17453f42efd543adc01a89e86732a,
         type: 3}
@@ -429,13 +444,18 @@ PrefabInstance:
     - target: {fileID: 6721838528679725330, guid: 89c17453f42efd543adc01a89e86732a,
         type: 3}
       propertyPath: Health
-      value: 300
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6721838528679725331, guid: 89c17453f42efd543adc01a89e86732a,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6721838528679725334, guid: 89c17453f42efd543adc01a89e86732a,
+        type: 3}
+      propertyPath: actionCam
+      value: 
+      objectReference: {fileID: 7309218160176263}
     - target: {fileID: 6721838528679725335, guid: 89c17453f42efd543adc01a89e86732a,
         type: 3}
       propertyPath: m_LocalPosition.x

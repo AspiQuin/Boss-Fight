@@ -50,7 +50,7 @@ public class DescisionTree : MonoBehaviour
     void Update()
     {
         //update timer
-        timer += Time.deltaTime;
+        timer += Time.fixedDeltaTime;
 
         //check if the action timer has expired
         if (timer > actionUpdate)
