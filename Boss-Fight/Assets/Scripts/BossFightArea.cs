@@ -142,8 +142,8 @@ public class BossFightArea : MonoBehaviour
         trueAgent.GetComponent<DamageScript>().Health = 100;
         mimicAgent.GetComponent<DamageScript>().Health = 100;
 
-        trueAgent.GetComponent<DamageScript>().dead = false;
-        mimicAgent.GetComponent<DamageScript>().dead = false;
+        //trueAgent.GetComponent<DamageScript>().dead = false;
+        //mimicAgent.GetComponent<DamageScript>().dead = false;
 
         mimicAgent.GetComponent<AgentBullet>().setSpawn();
 
