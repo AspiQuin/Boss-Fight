@@ -56,6 +56,7 @@ public class playerBullet : MonoBehaviour
         }
         if (Input.GetKeyDown("x"))
         {
+            
             if (actionTimer > 0.2)
             {
                 //Debug.Log(spawnPos);
