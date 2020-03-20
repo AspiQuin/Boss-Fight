@@ -831,6 +831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e05c86b5fdd7aee4db74bce28c22b739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 646704165}
   attackPoint: {fileID: 1845594493}
   attackRange: 0.5
@@ -856,6 +857,9 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+=======
+  animator: {fileID: 0}
+>>>>>>> be9bbd9dcb526453e253f247b9fdfe056c6b4ed8
 --- !u!1 &668806673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,7 +1751,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1845594492
+=======
+--- !u!1 &2026420820
+>>>>>>> be9bbd9dcb526453e253f247b9fdfe056c6b4ed8
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1755,17 +1763,21 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1845594493}
   m_Layer: 0
   m_Name: AttackPoint
+=======
   - component: {fileID: 369700178}
   m_Layer: 0
   m_Name: Recovery GameObject (369700178)
+>>>>>>> be9bbd9dcb526453e253f247b9fdfe056c6b4ed8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &1845594493
 Transform:
   m_ObjectHideFlags: 0
@@ -1780,6 +1792,7 @@ Transform:
   m_Father: {fileID: 646704154}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
 --- !u!1001 &2139123977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1859,3 +1872,4 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cb273d069cf70b429e7afdbc873f211, type: 3}
+>>>>>>> be9bbd9dcb526453e253f247b9fdfe056c6b4ed8
