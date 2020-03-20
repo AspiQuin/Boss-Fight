@@ -32,7 +32,7 @@ public class runForward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
+        timer += Time.fixedDeltaTime;
         // Check whether the player is within a certain range of the boss and sets inRange to true if they are
         if (Vector2.Distance(transform.position, thePlayer.position) <= rangeDist)
         {

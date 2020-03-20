@@ -21,7 +21,7 @@ public class DamageScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
+        timer += Time.fixedDeltaTime;
 
         //check if object is considered dead
         if (Health < 0)

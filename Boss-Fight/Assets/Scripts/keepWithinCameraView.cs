@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class keepWithinCameraView : MonoBehaviour
 {
+
+    public Camera actionCam;
+
     Collider2D objectSize;
 
     Vector3 bounding;
@@ -32,8 +35,8 @@ public class keepWithinCameraView : MonoBehaviour
         minimum = objectSize.bounds.min;
         maximum = objectSize.bounds.max;
 
-        Vector3 bottomLeftWorldCoordinates = Camera.main.ViewportToWorldPoint(Vector3.zero);
-        Vector3 topRightWorldCoordinates = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0));
+        Vector3 bottomLeftWorldCoordinates = actionCam.ViewportToWorldPoint(Vector3.zero);
+        Vector3 topRightWorldCoordinates = actionCam.ViewportToWorldPoint(new Vector3(1, 1, 0));
 
         moveRangeMin = bottomLeftWorldCoordinates + objectSize.bounds.extents;
         moveRangeMax = topRightWorldCoordinates - objectSize.bounds.extents;
@@ -44,10 +47,10 @@ public class keepWithinCameraView : MonoBehaviour
         minimum.y = minimum.y - center.y;
         minimum.x = minimum.x - center.x;
 
-        Debug.Log("center" + center);
-        Debug.Log("minimum" + minimum);
+        //Debug.Log("center" + center);
+        //Debug.Log("minimum" + minimum);
 
-        Debug.Log("maximum" + maximum);
+        //Debug.Log("maximum" + maximum);
 
     }
 
@@ -56,7 +59,7 @@ public class keepWithinCameraView : MonoBehaviour
     {
         // Keep boss within camera view
         // WorldToViewportPoint - Transforms position from viewport space into world space
-        Vector3 bossPosition = Camera.main.WorldToViewportPoint(transform.position);
+        Vector3 bossPosition = actionCam.WorldToViewportPoint(transform.position);
         //Debug.Log(transform.position);
         //Debug.Log(bossPosition);
         /*
