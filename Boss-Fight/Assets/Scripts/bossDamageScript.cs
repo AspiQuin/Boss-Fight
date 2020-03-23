@@ -21,7 +21,7 @@ public class bossDamageScript : MonoBehaviour
             //gameObject.GetComponent<bossMove>().enabled = true;
             
             //Erin here making a very base score calculation to develop the leaderboard
-            testScore += 10;
+            testScore += 200;
         }
     }
 
