@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837974926726270416}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 3.09, z: 0}
-  m_LocalScale: {x: 10, y: 0.5, z: 1.8420618}
+  m_LocalPosition: {x: 0.11, y: 3.69, z: 0}
+  m_LocalScale: {x: 10, y: 0.5, z: -0.53}
   m_Children: []
   m_Father: {fileID: 837974927540145307}
   m_RootOrder: 0
@@ -123,6 +123,7 @@ Transform:
   m_LocalScale: {x: 0.4404676, y: 0.4404676, z: 0.54287}
   m_Children:
   - {fileID: 837974926726270419}
+  - {fileID: 5747539655117427784}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -430,3 +431,33 @@ MonoBehaviour:
   playerProjectile: {fileID: 6851810909568674959, guid: 16335b46c08219c4391a8f6919bbd2b9,
     type: 3}
   agentInput: 0
+--- !u!1 &1020619930835185409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5747539655117427784}
+  m_Layer: 0
+  m_Name: Attack Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5747539655117427784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020619930835185409}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.109, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 837974927540145307}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
