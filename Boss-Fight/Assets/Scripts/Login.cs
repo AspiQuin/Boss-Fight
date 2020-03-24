@@ -21,19 +21,24 @@ public class Login : MonoBehaviour
        PlayButton.onClick.AddListener(() => {
         StartCoroutine(Main.Instance.Databasetest.Login(UsernameInput.text, PasswordInput.text));
         });
+
+        DontDestroyOnLoad(GameObject.Find("Main"));
         
-        Debug.Log(GameObject.Find("Main").GetComponent<databasetest>().loggedin);
+        
+        //Debug.Log(GameObject.Find("Main").GetComponent<databasetest>().loggedin);
     }
 
     public void RegisterClick()
     {
         SceneManager.LoadScene("RegisterScene");
+        Destroy(GameObject.Find("Main"));
     }
     
     void Update(){
                             
         if (GameObject.Find("Main").GetComponent<databasetest>().loggedin == true)
         {
+
             SceneManager.LoadScene("MainMenu");
         }
     }
