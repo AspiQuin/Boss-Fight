@@ -37,7 +37,7 @@ public class DamageScript : MonoBehaviour
         //remove from screen after a time
         if ((timer > deathTime) && dead)
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
      
         }
     }
