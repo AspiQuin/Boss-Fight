@@ -323,6 +323,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 812265354445606341, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 972435537295954286, guid: 7cb273d069cf70b429e7afdbc873f211,
         type: 3}
       propertyPath: m_Sprite
@@ -363,6 +368,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527997159724481440, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527997159724481443, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527997159724481452, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527997159724481453, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3527997159724481466, guid: 7cb273d069cf70b429e7afdbc873f211,
         type: 3}
