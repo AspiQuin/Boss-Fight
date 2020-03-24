@@ -6,6 +6,7 @@ public class playerBullet : MonoBehaviour
 {
 
     public GameObject playerProjectile;
+    public Animator animator;
 
     float actionTimer;
 
@@ -59,6 +60,8 @@ public class playerBullet : MonoBehaviour
             
             if (actionTimer > 0.2)
             {
+                //Activate animation for 
+                animator.SetTrigger("Shoot");
                 //Debug.Log(spawnPos);
                 GameObject projectileClone;
                 projectileClone = Instantiate(playerProjectile, spawnPos, Quaternion.identity);
