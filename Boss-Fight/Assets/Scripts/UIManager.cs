@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
     {
         hideFinished();
         hideWin();
-        user = (GameObject.Find("Main").GetComponent<databasetest>().result);
+        //user = (GameObject.Find("Main").GetComponent<databasetest>().result);
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class UIManager : MonoBehaviour
         {
                         
             //in this moment with the boss dead, add the current score
-            StartCoroutine(Main.Instance.Databasetest.ScoreInput((GameObject.Find("Main").GetComponent<databasetest>().result), (GameObject.Find("boss").GetComponent<bossDamageScript>().testScore)));
+            //StartCoroutine(Main.Instance.Databasetest.ScoreInput((GameObject.Find("Main").GetComponent<databasetest>().result), (GameObject.Find("boss").GetComponent<bossDamageScript>().testScore)));
             
             showWin();
             Time.timeScale = 0;
