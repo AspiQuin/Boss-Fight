@@ -14,30 +14,9 @@ public class databasetest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(GetDate());
         //StartCoroutine(GetUsers());
        // StartCoroutine(Login("unitytest", "12345"));
         //StartCoroutine(RegisterUser("unitytest","12345","unitytester"));
-    }
-    
-    public IEnumerator GetDate()
-    {
-        using(UnityWebRequest www = UnityWebRequest.Get("http://ugrad.bitdegree.ca/~erinwaldram/testgetdate.php")) {
-            yield return www.Send();
-            
-            if (www.isNetworkError || www.isHttpError) {
-                //Debug.Log(www.error);
-            }
-            else {
-            //Show the time results as text
-                //Debug.Log(www.downloadHandler.text);
-            
-            //Or retrieve results as binary data
-            byte[] results = www.downloadHandler.data;
-            }
-        
-        }
-    
     }
     
     public IEnumerator GetUsers()
