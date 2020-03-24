@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {   
     
-    public string user;
+    //public string user;
     //public int score;
     // Start is called before the first frame update
     public GameObject[] finishObjects;
@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
     {
         hideFinished();
         hideWin();
-        user = (GameObject.Find("Main").GetComponent<databasetest>().result);
+        //string user = (GameObject.Find("Main").GetComponent<databasetest>().result);
     }
 
     // Update is called once per frame

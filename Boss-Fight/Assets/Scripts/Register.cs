@@ -21,13 +21,18 @@ public class Register : MonoBehaviour
        RegisterButton.onClick.AddListener(() => {
        StartCoroutine(Main.Instance.Databasetest.RegisterUser(UsernameInput.text, PasswordInput.text, PasswordInput2.text, ScreennameInput.text));
        });
+       
+       DontDestroyOnLoad(GameObject.Find("Main"));
+
     }
     
     void Update(){
                             
     if (GameObject.Find("Main").GetComponent<databasetest>().loggedin == true)
     {
+        
         SceneManager.LoadScene("MainMenu");
+        
     }
     }
 
