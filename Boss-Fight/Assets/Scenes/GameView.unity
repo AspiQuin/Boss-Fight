@@ -389,6 +389,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4273125870004521618, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 868098240}
     - target: {fileID: 4273125870004521619, guid: 7cb273d069cf70b429e7afdbc873f211,
         type: 3}
       propertyPath: m_Offset.x
@@ -443,7 +448,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4145a18a9f0c737458f220c7ef290281,
+      objectReference: {fileID: 21300000, guid: 718d4b4fa5e28d140bfadb6c22d52b52,
         type: 3}
     - target: {fileID: 4273125870004521622, guid: 7cb273d069cf70b429e7afdbc873f211,
         type: 3}
@@ -495,6 +500,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4273125870004521647, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 868098240}
     - target: {fileID: 5129150651753274203, guid: 7cb273d069cf70b429e7afdbc873f211,
         type: 3}
       propertyPath: m_Enabled
@@ -733,7 +743,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 603af8ac43a15ac488a383cdfa8479d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  user: 
   finishObjects:
   - {fileID: 1586317778}
   winObjects:
@@ -949,6 +958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0dd5206397c16459a17f1ec336547c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!114 &646704158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -990,6 +1000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerProjectile: {fileID: 6851810909568674959, guid: 16335b46c08219c4391a8f6919bbd2b9,
     type: 3}
+  animator: {fileID: 0}
 --- !u!114 &646704161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1365,6 +1376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shield: {fileID: 1407461454}
   shieldChargeNow: 10
+  animator: {fileID: 868098240}
 --- !u!1 &1285389820
 GameObject:
   m_ObjectHideFlags: 0

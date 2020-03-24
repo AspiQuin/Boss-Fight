@@ -16,11 +16,7 @@ public class UIManager : MonoBehaviour
     {
         hideFinished();
         hideWin();
-<<<<<<< HEAD
-        //user = (GameObject.Find("Main").GetComponent<databasetest>().result);
-=======
         //string user = (GameObject.Find("Main").GetComponent<databasetest>().result);
->>>>>>> ecd6cf49da4bbd3521b81ada0eea02b9a94e815d
     }
 
     // Update is called once per frame
