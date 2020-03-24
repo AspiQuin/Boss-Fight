@@ -5,7 +5,10 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
-{
+{   
+    
+    //public string user;
+    //public int score;
     // Start is called before the first frame update
     public GameObject[] finishObjects;
     public GameObject[] winObjects;
@@ -14,6 +17,7 @@ public class UIManager : MonoBehaviour
     {
         hideFinished();
         hideWin();
+        //string user = (GameObject.Find("Main").GetComponent<databasetest>().result);
     }
 
     // Update is called once per frame
@@ -21,6 +25,10 @@ public class UIManager : MonoBehaviour
     {
         if (GameObject.FindWithTag("boss").GetComponent<DamageScript>().dead == true)
         {
+                        
+            //in this moment with the boss dead, add the current score
+            StartCoroutine(Main.Instance.Databasetest.ScoreInput((GameObject.Find("Main").GetComponent<databasetest>().result), (GameObject.Find("boss").GetComponent<bossDamageScript>().testScore)));
+            
             showWin();
             Time.timeScale = 0;
         }
@@ -29,6 +37,9 @@ public class UIManager : MonoBehaviour
         {
             showFinished();
             Time.timeScale = 0;
+            
+            //in this moment, with the player dead, show the current score despite death
+            StartCoroutine(Main.Instance.Databasetest.ScoreInput((GameObject.Find("Main").GetComponent<databasetest>().result), (GameObject.Find("boss").GetComponent<bossDamageScript>().testScore)));
         }
 
         if(GameObject.FindWithTag("boss").GetComponent<bubbleShield>().showTxt == true)
