@@ -429,4 +429,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerProjectile: {fileID: 6851810909568674959, guid: 16335b46c08219c4391a8f6919bbd2b9,
     type: 3}
+  playerRB: {fileID: 0}
   agentInput: 0

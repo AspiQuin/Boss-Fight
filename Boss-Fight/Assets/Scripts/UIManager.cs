@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     public GameObject[] finishObjects;
     public GameObject[] winObjects;
+    public GameObject bubbleShield;
     void Start()
     {
         hideFinished();
@@ -28,6 +29,15 @@ public class UIManager : MonoBehaviour
         {
             showFinished();
             Time.timeScale = 0;
+        }
+
+        if(GameObject.FindWithTag("boss").GetComponent<bubbleShield>().showTxt == true)
+        {
+            showBubble();
+        }
+        else
+        {
+            hideBubble();
         }
     }
 
@@ -71,6 +81,16 @@ public class UIManager : MonoBehaviour
         {
             g.SetActive(true);
         }
+    }
+
+    void showBubble()
+    {
+        bubbleShield.SetActive(true);
+    }
+
+    void hideBubble()
+    {
+        bubbleShield.SetActive(false);
     }
     
     

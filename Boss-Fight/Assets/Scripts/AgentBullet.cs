@@ -6,6 +6,7 @@ public class AgentBullet : MonoBehaviour
 {
 
     public GameObject playerProjectile;
+    public Rigidbody2D playerRB;
 
     float actionTimer;
 
@@ -87,5 +88,17 @@ public class AgentBullet : MonoBehaviour
                 break;
                 }
         }
+
+    /*
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        Debug.Log("General col");
+        if(col.gameObject.tag == "playerProjectile")
+        {
+            playerRB.velocity = Vector3.zero;
+            playerRB.angularVelocity = 0f;
+        }
+    }  
+    */
 
 }

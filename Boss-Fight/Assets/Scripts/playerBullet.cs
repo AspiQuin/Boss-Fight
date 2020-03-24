@@ -15,6 +15,9 @@ public class playerBullet : MonoBehaviour
 
     float movementSpeed = 2000F;
 
+    bool changeDir = false;
+    bool range = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +36,16 @@ public class playerBullet : MonoBehaviour
     void Update()
     {
         actionTimer += Time.fixedDeltaTime;
+
+        GameObject boss2 = GameObject.Find("boss");
+        bubbleShield bossScript = boss2.GetComponent<bubbleShield>();
+        changeDir = bossScript.changeDirection;
+        range = bossScript.isInRange;
+
+        changeDir = bossScript.changeDirection;
+        Debug.Log(changeDir);
+
+
         if (Input.GetKey("up"))
         {
             direction = 0F;
