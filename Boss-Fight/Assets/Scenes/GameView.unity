@@ -543,7 +543,7 @@ PrefabInstance:
     - target: {fileID: 3527997159724481443, guid: 7cb273d069cf70b429e7afdbc873f211,
         type: 3}
       propertyPath: distanceSensor
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3527997159724481452, guid: 7cb273d069cf70b429e7afdbc873f211,
         type: 3}
@@ -559,6 +559,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527997159724481466, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527997160941515500, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3629453501347914425, guid: 7cb273d069cf70b429e7afdbc873f211,
         type: 3}
