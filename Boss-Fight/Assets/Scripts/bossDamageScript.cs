@@ -17,8 +17,8 @@ public class bossDamageScript : MonoBehaviour
         if (collide.gameObject.tag == "playerProjectile")
         {
             gameObject.GetComponent<DamageScript>().damageTaken(10);
-            //Destroy(collide.gameObject);
-            //gameObject.GetComponent<bossMove>().enabled = true;
+            Destroy(collide.gameObject);
+            gameObject.GetComponent<bossMove>().enabled = true;
             
             //Erin here making a very base score calculation to develop the leaderboard
             testScore += 200;

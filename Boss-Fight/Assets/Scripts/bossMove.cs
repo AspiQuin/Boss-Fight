@@ -7,7 +7,7 @@ public class bossMove : MonoBehaviour
     public Rigidbody2D my_rb;
     public Rigidbody2D player1;
     public Transform player;
-    float speed = 1.1f;
+    float speed = 3.0f;
     int minDistance = 0;
     bool haveCollided = false;
 

@@ -59,7 +59,7 @@ public class DescisionTree : MonoBehaviour
             if (!gameObject.GetComponent<bossMove>().enabled)
             {
                 gameObject.GetComponent<bossMove>().enabled = true;
-                Debug.Log("test");
+                //Debug.Log("test");
             }
             timer = 0;
             //if the player is within a certain distance
