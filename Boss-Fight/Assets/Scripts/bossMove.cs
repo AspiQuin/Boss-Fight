@@ -26,6 +26,8 @@ public class bossMove : MonoBehaviour
         my_rb.freezeRotation = true;
         player1.freezeRotation = true;
 
+        my_rb.velocity = Vector2.zero;
+
         // Boss follows player
         if (Vector2.Distance(transform.position, player.position) >= minDistance && haveCollided == false)
         {

@@ -30,6 +30,7 @@ public class playerMeleeCombat : MonoBehaviour
         {
             Debug.Log("Boss was hit");
             GameObject.Find("boss").GetComponent<DamageScript>().Health -= 30;
+            
         }
     }
 
