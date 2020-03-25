@@ -9,6 +9,7 @@ TagManager:
   - showOnDead
   - showOnWin
   - bossProjectile
+  - music
   layers:
   - Default
   - TransparentFX
