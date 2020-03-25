@@ -5,15 +5,13 @@ using UnityEngine;
 public class playerBubbleShield : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     public GameObject shield;
     static double totalShieldCharge = 10;
     public double shieldChargeNow = 10;
     bool shieldBurnt = false;
+    public Animator animator;
+
     // Update is called once per frame
     void Update()
     {
@@ -34,6 +32,7 @@ public class playerBubbleShield : MonoBehaviour
         {
             shield.SetActive(true);
             shieldChargeNow -= 2*Time.deltaTime;
+            animator.SetTrigger("Block");
         }
         else
         {

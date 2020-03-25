@@ -7,7 +7,7 @@ public class bossMove : MonoBehaviour
     public Rigidbody2D my_rb;
     public Rigidbody2D player1;
     public Transform player;
-    float speed = 1.1f;
+    float speed = 3.0f;
     int minDistance = 0;
     bool haveCollided = false;
 
@@ -25,6 +25,8 @@ public class bossMove : MonoBehaviour
         // Freeze the rotation on the boss and player to prevent from the tipping over when they collide
         my_rb.freezeRotation = true;
         player1.freezeRotation = true;
+
+        my_rb.velocity = Vector2.zero;
 
         // Boss follows player
         if (Vector2.Distance(transform.position, player.position) >= minDistance && haveCollided == false)

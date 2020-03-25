@@ -6,6 +6,7 @@ public class playerBullet : MonoBehaviour
 {
 
     public GameObject playerProjectile;
+    public Animator animator;
 
     float actionTimer;
 
@@ -14,6 +15,9 @@ public class playerBullet : MonoBehaviour
     Vector2 playerSize;
 
     float movementSpeed = 2000F;
+
+    bool changeDir = false;
+    bool range = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +37,16 @@ public class playerBullet : MonoBehaviour
     void Update()
     {
         actionTimer += Time.fixedDeltaTime;
+
+        GameObject boss2 = GameObject.Find("boss");
+        bubbleShield bossScript = boss2.GetComponent<bubbleShield>();
+        changeDir = bossScript.changeDirection;
+        range = bossScript.isInRange;
+
+        changeDir = bossScript.changeDirection;
+        Debug.Log(changeDir);
+
+
         if (Input.GetKey("up"))
         {
             direction = 0F;
@@ -59,6 +73,8 @@ public class playerBullet : MonoBehaviour
             
             if (actionTimer > 0.2)
             {
+                //Activate animation for 
+                animator.SetTrigger("Shoot");
                 //Debug.Log(spawnPos);
                 GameObject projectileClone;
                 projectileClone = Instantiate(playerProjectile, spawnPos, Quaternion.identity);

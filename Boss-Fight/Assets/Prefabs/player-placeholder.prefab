@@ -217,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerProjectile: {fileID: 6851810909568674959, guid: 16335b46c08219c4391a8f6919bbd2b9,
     type: 3}
+  animator: {fileID: 0}
 --- !u!50 &837974927540145306
 Rigidbody2D:
   serializedVersion: 4
@@ -250,6 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0dd5206397c16459a17f1ec336547c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!114 &837974927540145311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,6 +433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerProjectile: {fileID: 6851810909568674959, guid: 16335b46c08219c4391a8f6919bbd2b9,
     type: 3}
+  playerRB: {fileID: 0}
   agentInput: 0
 --- !u!1 &1020619930835185409
 GameObject:
