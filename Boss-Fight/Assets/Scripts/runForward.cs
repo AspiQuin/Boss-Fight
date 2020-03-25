@@ -26,7 +26,7 @@ public class runForward : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //lastPos = thePlayer.position;
     }
 
     // Update is called once per frame
