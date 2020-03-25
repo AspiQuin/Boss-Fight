@@ -132,6 +132,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 369288377}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &246286900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246286899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd9ce17e1867ce54583cbff587803571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossProjectile: {fileID: 6851810909568674959, guid: 2e402dba4b4d4234d966b974357531ff,
+    type: 3}
+  fire: 0
 --- !u!114 &246286917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -525,6 +540,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 868098223}
+    - target: {fileID: 3527997159724481443, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: distanceSensor
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3527997159724481452, guid: 7cb273d069cf70b429e7afdbc873f211,
         type: 3}
       propertyPath: m_Enabled

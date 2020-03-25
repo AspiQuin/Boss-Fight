@@ -8,6 +8,7 @@ TagManager:
   - boss
   - showOnDead
   - showOnWin
+  - bossProjectile
   layers:
   - Default
   - TransparentFX
