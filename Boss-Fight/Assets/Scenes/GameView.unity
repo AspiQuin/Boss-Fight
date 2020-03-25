@@ -499,6 +499,52 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 972435537295954286, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 972435537295954286, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7e422e00683ed6141acc8b00e50216be,
+        type: 3}
+    - target: {fileID: 972435537295954286, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 972435537295954286, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.111739054
+      objectReference: {fileID: 0}
+    - target: {fileID: 972435537295954286, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.764151
+      objectReference: {fileID: 0}
+    - target: {fileID: 972435537295954286, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.24575068
+      objectReference: {fileID: 0}
+    - target: {fileID: 972435537295954286, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.4117647
+      objectReference: {fileID: 0}
+    - target: {fileID: 972435537295954286, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1101088805
+      objectReference: {fileID: 0}
+    - target: {fileID: 972435537295954286, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2115078581737258169, guid: 7cb273d069cf70b429e7afdbc873f211,
         type: 3}
       propertyPath: m_Enabled
@@ -1482,18 +1528,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 369288377}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &868098224 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4273125870004521621, guid: 7cb273d069cf70b429e7afdbc873f211,
-    type: 3}
-  m_PrefabInstance: {fileID: 369288377}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &868098231 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 4273125870004521620, guid: 7cb273d069cf70b429e7afdbc873f211,
-    type: 3}
-  m_PrefabInstance: {fileID: 369288377}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &868098240
 Animator:
   serializedVersion: 3
@@ -2022,7 +2056,7 @@ MonoBehaviour:
   fired: 0
   changeDirection: 0
   delInst: 0
---- !u!1 &1407461454
+--- !u!1 &1407461454 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7192109121745138630, guid: 7cb273d069cf70b429e7afdbc873f211,
     type: 3}
