@@ -200,7 +200,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246286899}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 278a0b24b7a1bb049b7d918f72ba4e4d, type: 3}
   m_Name: 
@@ -510,6 +510,46 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6851810909568674956, guid: 16335b46c08219c4391a8f6919bbd2b9,
         type: 3}
+    - target: {fileID: 3527997159724481440, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527997159724481440, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 868098224}
+    - target: {fileID: 3527997159724481440, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: player1
+      value: 
+      objectReference: {fileID: 868098231}
+    - target: {fileID: 3527997159724481443, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527997159724481443, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 868098223}
+    - target: {fileID: 3527997159724481452, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527997159724481452, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: thePlayer
+      value: 
+      objectReference: {fileID: 868098224}
+    - target: {fileID: 3527997159724481453, guid: 7cb273d069cf70b429e7afdbc873f211,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3629453501347914425, guid: 7cb273d069cf70b429e7afdbc873f211,
         type: 3}
       propertyPath: m_BehaviorType
@@ -2022,7 +2062,7 @@ MonoBehaviour:
   fired: 0
   changeDirection: 0
   delInst: 0
---- !u!1 &1407461454
+--- !u!1 &1407461454 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7192109121745138630, guid: 7cb273d069cf70b429e7afdbc873f211,
     type: 3}
