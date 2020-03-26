@@ -156,8 +156,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.4, y: -300.5}
-  m_SizeDelta: {x: 290.2, y: 82.7}
+  m_AnchoredPosition: {x: 1.56, y: -198.13}
+  m_SizeDelta: {x: 209.35, y: 51.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &133379235
 MonoBehaviour:
@@ -283,8 +283,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 93.5, y: -76.2}
-  m_SizeDelta: {x: 984.9, y: 445.7}
+  m_AnchoredPosition: {x: 17.5, y: -31.9}
+  m_SizeDelta: {x: 619.5, y: 259.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &268340587
 MonoBehaviour:
@@ -306,22 +306,22 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 69
+    m_MinSize: 0
+    m_MaxSize: 300
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.66
+    m_LineSpacing: 1.5
   m_Text: "JOHNATHAN BELL\t\t\t\t\t\t\t\t\t\t\t\t\t  ART, UI\nJASMINE DRAYCOTT \t\t\t\t\t\t\t\t\t\t\tPROGRAMMING\nSEHRISH
-    HOODBHOY\t\t\t\t\t\t\t\t\tART, ANIMATION, UI\nDEXTER HUNTER-LAROCHE\t\t\t\t\t\t\t
+    HOODBHOY\t\t\t\t\t\t\t\t\t\tART, ANIMATION, UI\nDEXTER HUNTER-LAROCHE\t\t\t\t\t\t\t
     \ SOUND, TESTING\nMATTHEW KING\t\t\t\t                         SOUND, STORY, GAME
-    DEV.\nCOLE \"FLIP\" THOMPSON\t\t\t\t\t\t\t\t\t  UI, TESTING\nERIN WALDRAM\t\t\t\t\t\t\t\t\t
-    \  MANAGER, STORY, DATABASE\nQUINLAN WALKER\t\t\t\t\t              MANAGER, NEURAL
+    DEV.\nCOLE \"FLIP\" THOMPSON\t\t\t\t\t\t\t\t\t  \t  UI, TESTING\nERIN WALDRAM\t\t\t\t\t\t\t\t\t
+    \  MANAGER, STORY, DATABASE\nQUINLAN WALKER\t\t\t\t\t               MANAGER, NEURAL
     NETWORK"
 --- !u!222 &268340588
 CanvasRenderer:
@@ -366,7 +366,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1525, y: 864.2}
+  m_SizeDelta: {x: 1103, y: 568}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &400181196
 MonoBehaviour:
