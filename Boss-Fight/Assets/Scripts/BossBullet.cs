@@ -5,6 +5,7 @@ using UnityEngine;
 public class BossBullet : MonoBehaviour
 {
     public GameObject bossProjectile;
+    public Animator animator;
 
     float actionTimer;
 
@@ -58,13 +59,15 @@ public class BossBullet : MonoBehaviour
         actionTimer += Time.fixedDeltaTime;
         if (fire)
         {
-
+            //Animation trigger
+            animator.SetTrigger("Shoot");
             if (actionTimer > 0.2)
             {
                 //Debug.Log(spawnPos);
                 GameObject projectileClone;
                 projectileClone = Instantiate(bossProjectile, spawnPos, Quaternion.identity);
                 //velocity.direction = direction;
+                
 
                 switch (direction)
                 {
