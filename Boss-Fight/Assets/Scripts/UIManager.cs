@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
         hideFinished();
         hideWin();
         bubbleShield.SetActive(false);
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
