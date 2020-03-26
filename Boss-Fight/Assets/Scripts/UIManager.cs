@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
     {
         hideFinished();
         hideWin();
+        bubbleShield.SetActive(false);
     }
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 0;
             
             //in this moment, with the player dead, show the current score despite death
-            StartCoroutine(Main.Instance.Databasetest.ScoreInput((GameObject.Find("Main").GetComponent<databasetest>().result), (GameObject.Find("boss").GetComponent<bossDamageScript>().testScore)));
+            //StartCoroutine(Main.Instance.Databasetest.ScoreInput((GameObject.Find("Main").GetComponent<databasetest>().result), (GameObject.Find("boss").GetComponent<bossDamageScript>().testScore)));
         }
 
         if(GameObject.FindWithTag("boss").GetComponent<bubbleShield>().showTxt == true)
@@ -51,12 +52,6 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    //reload the scene
-    //public void Reload()
-    //{
-       // Scene scene = SceneManager.GetActiveScene();
-       // SceneManager.LoadScene(scene.name);
-    //}
     //hides the win objects on start
     public void hideWin()
     {
@@ -95,12 +90,12 @@ public class UIManager : MonoBehaviour
 
     void showBubble()
     {
-        bubbleShield.SetActive(true);
+       // bubbleShield.SetActive(true);
     }
 
     void hideBubble()
     {
-        bubbleShield.SetActive(false);
+       // bubbleShield.SetActive(false);
     }
     
     
