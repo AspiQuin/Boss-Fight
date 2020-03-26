@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossProjectile: {fileID: 6851810909568674959, guid: 2e402dba4b4d4234d966b974357531ff,
     type: 3}
+  animator: {fileID: 246286913}
   fire: 0
 --- !u!95 &246286913
 Animator:
