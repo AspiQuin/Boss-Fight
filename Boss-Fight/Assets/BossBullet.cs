@@ -12,7 +12,7 @@ public class BossBullet : MonoBehaviour
 
     Vector2 playerSize;
 
-    float movementSpeed = 2000F;
+    float movementSpeed = 1000F;
 
     float direction = 3F;
 
