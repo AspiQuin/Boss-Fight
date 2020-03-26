@@ -19,11 +19,7 @@ GameObject:
   - component: {fileID: 6721838528679725343}
   - component: {fileID: 6721838528679725328}
   - component: {fileID: 6721838528679725342}
-  - component: {fileID: 1931858273694847656}
-  - component: {fileID: 809036338964605229}
-  - component: {fileID: 6798499236339990092}
   - component: {fileID: -1929168158204240499}
-  - component: {fileID: 7419835657240838006}
   - component: {fileID: 8135602081856212490}
   m_Layer: 0
   m_Name: boss
@@ -40,8 +36,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6721838528679725321}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.025466, y: 4.7909684, z: 0}
-  m_LocalScale: {x: 0.1497712, y: 0.1497712, z: 0.34977117}
+  m_LocalPosition: {x: 11.272, y: -7.2289, z: 0}
+  m_LocalScale: {x: 6.299877, y: 6.299877, z: 14.712545}
   m_Children:
   - {fileID: 6721838529561411678}
   m_Father: {fileID: 0}
@@ -85,9 +81,9 @@ SpriteRenderer:
   m_SortingLayerID: 1101088805
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f248f5eae120dd445883febcf6622a9a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 49a18a3133207e24e9d177a9b427780b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 6.41, y: 7.12}
@@ -108,6 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79c0499b3fe90d44688f89029751ed81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actionCam: {fileID: 0}
 --- !u!60 &6721838528679725332
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -125,7 +122,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 14.889999, y: 27.01038}
+    oldSize: {x: 1, y: 0.75}
     newSize: {x: 6.41, y: 7.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -536,63 +533,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b376fde2e147589468ff661adf15d53f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1931858273694847656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6721838528679725321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_BrainParameters:
-    vectorObservationSize: 0
-    numStackedVectorObservations: 3
-    vectorActionSize: 0b000000
-    vectorActionDescriptions: []
-    vectorActionSpaceType: 0
-  m_Model: {fileID: 5022602860645237092, guid: 5e812fb65a4d26449b0dbd052c8352d4, type: 3}
-  m_InferenceDevice: 0
-  m_BehaviorType: 0
-  m_BehaviorName: bossLearning
-  m_TeamID: 0
-  m_UseChildSensors: 0
---- !u!114 &809036338964605229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6721838528679725321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 282f342c2ab144bf38be65d4d0c4e07d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 1614856049843626349, guid: 04fb5846b6546bd40a5de9e08b9de50b, type: 3}
-  sensorName: CameraSensor
-  width: 80
-  height: 45
-  grayscale: 0
-  compression: 1
---- !u!114 &6798499236339990092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6721838528679725321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DecisionPeriod: 5
-  RepeatAction: 1
-  offsetStep: 0
 --- !u!61 &-1929168158204240499
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -610,7 +550,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 14.889999, y: 27.01038}
+    oldSize: {x: 1, y: 0.75}
     newSize: {x: 6.41, y: 7.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -619,40 +559,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 12.53648, y: 26.618244}
   m_EdgeRadius: 0
---- !u!114 &7419835657240838006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6721838528679725321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa371107916b8d845bca8d54d1413ca4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agentParameters:
-    maxStep: 0
-  hasUpgradedFromAgentParameters: 1
-  maxStep: 1500
-  area: {fileID: 0}
-  timeBetweenDecisionsAtInference: 0
-  actionCam: {fileID: 0}
-  team: 0
-  showAction: 0
-  showReward: 0
-  showStep: 0
-  bossBrain: {fileID: 5022602860645237092, guid: 5e812fb65a4d26449b0dbd052c8352d4,
-    type: 3}
-  playerBrain: {fileID: 5022602860645237092, guid: 78e4407521366f9429e3b127a23b33ad,
-    type: 3}
-  renderCamera: {fileID: 0}
-  maskActions: 1
-  shoot: 0
-  charging: 0
-  m_agent: {fileID: 0}
-  agentRb: {fileID: 0}
-  inverse: 0
 --- !u!114 &8135602081856212490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,6 +573,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 0}
   boss: {fileID: 0}
+  boxCol: {fileID: 0}
+  rb: {fileID: 0}
+  showTxt: 0
+  isInRange: 0
+  fired: 0
+  changeDirection: 0
+  delInst: 0
 --- !u!1 &6721838529561411679
 GameObject:
   m_ObjectHideFlags: 0

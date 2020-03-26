@@ -33,15 +33,14 @@ public class takeDamage : MonoBehaviour
         
 
     }
-    /*
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "boss")
-        {
-            
-            gameObject.GetComponent<DamageScript>().damageTaken(10);
-        }
 
+    void OnCollisionEnter2D(Collision2D collide)
+    {
+        if (collide.gameObject.tag == "bossProjectile")
+        {
+            gameObject.GetComponent<DamageScript>().damageTaken(10);
+            Destroy(collide.gameObject);
+            
+        }
     }
-    */
 }

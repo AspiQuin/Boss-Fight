@@ -17,6 +17,8 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
         //reset animation checks
         animator.SetBool("Walk", false);
         //animator.SetBool("Run", false);
