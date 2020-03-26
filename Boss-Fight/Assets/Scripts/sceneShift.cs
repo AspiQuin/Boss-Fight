@@ -47,4 +47,11 @@ public class sceneShift : MonoBehaviour
     {
         SceneManager.LoadScene("Leaderboard");
     }
+    
+    public void Reload()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+        Time.timeScale = 1;
+    }
 }
