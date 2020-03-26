@@ -11,7 +11,7 @@ public class BossDeflectBullet : MonoBehaviour
     bool changeDir = false;
     bool range = false;
 
-    float movementSpeed = 2000F;
+    float movementSpeed = 1000F;
 
     // Start is called before the first frame update
     void Start()
