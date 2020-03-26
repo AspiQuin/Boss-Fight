@@ -14,12 +14,10 @@ public class databasetest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(GetUsers());
-       // StartCoroutine(Login("unitytest", "12345"));
-        //StartCoroutine(RegisterUser("unitytest","12345","unitytester"));
+
     }
     
-    public IEnumerator GetUsers()
+    /*public IEnumerator GetUsers()
     {
         using(UnityWebRequest www = UnityWebRequest.Get("http://ugrad.bitdegree.ca/~erinwaldram/unitydbtest.php")) {
             yield return www.Send();
@@ -38,7 +36,7 @@ public class databasetest : MonoBehaviour
         
         }
     
-    }
+    }*/
     
     public IEnumerator Login(string username, string password)
     {
@@ -131,19 +129,24 @@ public class databasetest : MonoBehaviour
     
      public IEnumerator GetLeaderboard()
     {
-        using(UnityWebRequest www = UnityWebRequest.Get("http://ugrad.bitdegree.ca/~erinwaldram/Leaderboard.php")) {
-            yield return www.Send();
+        //using(UnityWebRequest www = UnityWebRequest.Get("http://ugrad.bitdegree.ca/~erinwaldram/Leaderboard.php")) {
+           // yield return www.Send();
             
-            if (www.isNetworkError || www.isHttpError) {
+            var loaded = new UnityWebRequest("http://ugrad.bitdegree.ca/~erinwaldram/Leaderboard.php");
+            loaded.downloadHandler = new DownloadHandlerBuffer();
+            yield return loaded.SendWebRequest();
+            s = loaded.downloadHandler.text;
+            
+            /*if (www.isNetworkError || www.isHttpError) {
                 //Debug.Log(www.error);
             }
             else {
             //Show the time results as text
                 //Debug.Log(www.downloadHandler.text);
                 s = (www.downloadHandler.text);
-        }
+        }*/
     }
-    }
+
     
 
     // Update is called once per frame
