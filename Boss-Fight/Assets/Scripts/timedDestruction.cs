@@ -5,7 +5,7 @@ using UnityEngine;
 public class timedDestruction : MonoBehaviour
 {
     float timer;
-    float actionTimer = 0.6f;
+    public float actionTimer = 0.6f;
     bool deleteInst;
     bool destroyObj = true;
     // Start is called before the first frame update
