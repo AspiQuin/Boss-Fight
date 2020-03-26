@@ -28,7 +28,7 @@ public class UIManager : MonoBehaviour
         {
                         
             //in this moment with the boss dead, add the current score
-            //StartCoroutine(Main.Instance.Databasetest.ScoreInput((GameObject.Find("Main").GetComponent<databasetest>().result), (GameObject.Find("boss").GetComponent<bossDamageScript>().testScore)));
+            StartCoroutine(Main.Instance.Databasetest.ScoreInput((GameObject.Find("Main").GetComponent<databasetest>().result), (GameObject.Find("boss").GetComponent<bossDamageScript>().testScore)));
             
             showWin();
             Time.timeScale = 0;
@@ -40,7 +40,7 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 0;
             
             //in this moment, with the player dead, show the current score despite death
-            //StartCoroutine(Main.Instance.Databasetest.ScoreInput((GameObject.Find("Main").GetComponent<databasetest>().result), (GameObject.Find("boss").GetComponent<bossDamageScript>().testScore)));
+            StartCoroutine(Main.Instance.Databasetest.ScoreInput((GameObject.Find("Main").GetComponent<databasetest>().result), (GameObject.Find("boss").GetComponent<bossDamageScript>().testScore)));
         }
 
         if(GameObject.FindWithTag("boss").GetComponent<bubbleShield>().showTxt == true)
